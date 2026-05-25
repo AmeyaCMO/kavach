@@ -1,0 +1,93 @@
+.heading {
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--c-danger);
+  margin-bottom: 6px;
+}
+
+.sub {
+  font-size: 11px;
+  color: var(--c-text-dim);
+  margin-bottom: 14px;
+}
+
+.card {
+  background: rgba(192, 57, 43, 0.08);
+  border: 1px solid rgba(192, 57, 43, 0.3);
+  padding: 16px;
+  display: flex;
+  gap: 14px;
+}
+
+.avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--c-surface-2);
+  border: 2px solid var(--c-danger);
+  color: var(--c-danger);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.body {
+  flex: 1;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.driverId {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--c-text);
+}
+
+.chip {
+  background: var(--c-danger);
+  color: var(--c-text);
+  font-size: 10px;
+  font-weight: 700;
+  padding: 3px 10px;
+  letter-spacing: 0.08em;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  font-size: 11.5px;
+}
+
+.grid dt {
+  color: var(--c-text-dim);
+  font-size: 9px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 2px;
+}
+
+.grid dd {
+  color: var(--c-text-muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.warning {
+  margin-top: 12px;
+  padding: 8px 12px;
+  background: rgba(192, 57, 43, 0.15);
+  border-left: 2px solid var(--c-danger);
+  font-size: 11px;
+  color: var(--c-danger);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}

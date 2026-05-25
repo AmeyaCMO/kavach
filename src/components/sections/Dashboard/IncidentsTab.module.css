@@ -1,0 +1,83 @@
+.heading {
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--c-text);
+  margin-bottom: 14px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.card {
+  background: var(--c-surface-2);
+  padding: 12px 14px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.cardValue {
+  font-family: var(--font-display);
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+}
+
+.cardLabel {
+  font-size: 11px;
+  color: var(--c-text-dim);
+}
+
+.matrixHeading {
+  font-size: 10px;
+  color: var(--c-text-dim);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.matrix {
+  list-style: none;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 9px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.type {
+  flex: 1;
+  font-size: 11px;
+  color: var(--c-text);
+}
+
+.bar {
+  width: 64px;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.fill {
+  display: block;
+  height: 100%;
+}
+
+.impact {
+  font-size: 10px;
+  color: var(--c-text-dim);
+  width: 24px;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}

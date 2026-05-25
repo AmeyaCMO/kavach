@@ -1,0 +1,28 @@
+.logo {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 2px;
+  line-height: 1;
+}
+
+.deva {
+  font-family: var(--font-deva);
+  font-weight: 900;
+  color: var(--c-saffron);
+}
+
+.wordmark {
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: var(--c-text);
+}
+
+.sm .deva     { font-size: 18px; }
+.sm .wordmark { font-size: 18px; }
+
+.md .deva     { font-size: 24px; }
+.md .wordmark { font-size: 22px; }
+
+.lg .deva     { font-size: 32px; }
+.lg .wordmark { font-size: 30px; }

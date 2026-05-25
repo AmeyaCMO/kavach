@@ -1,0 +1,35 @@
+.strip {
+  background: var(--c-surface);
+  border-top: 1px solid var(--c-accent-line);
+  border-bottom: 1px solid var(--c-accent-line);
+  padding: 14px 0;
+  overflow: hidden;
+}
+
+.track {
+  display: flex;
+  gap: 60px;
+  list-style: none;
+  white-space: nowrap;
+  animation: marquee-x 22s linear infinite;
+  width: max-content;
+}
+
+.item {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--c-text-dim);
+  flex-shrink: 0;
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  background: var(--c-accent);
+  border-radius: 50%;
+}

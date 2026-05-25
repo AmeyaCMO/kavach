@@ -1,0 +1,138 @@
+.window {
+  background: var(--c-surface);
+  border: 1px solid var(--c-accent-line);
+  overflow: hidden;
+}
+
+.chrome {
+  background: var(--c-surface-2);
+  padding: 10px 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.lights {
+  display: flex;
+  gap: 6px;
+}
+.lights span {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.url {
+  flex: 1;
+  background: var(--c-surface-3);
+  border-radius: 4px;
+  padding: 5px 12px;
+  font-family: var(--font-sans);
+  font-size: 11px;
+  color: var(--c-text-dim);
+  font-variant-numeric: tabular-nums;
+}
+
+.lock {
+  font-size: 10px;
+  color: var(--c-text-dim);
+  letter-spacing: 0.06em;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  min-height: 480px;
+}
+
+.sidebar {
+  background: var(--c-surface-2);
+  border-right: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 20px 0;
+}
+
+.brand {
+  padding: 0 18px 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  margin-bottom: 8px;
+}
+
+.brandSub {
+  font-size: 9px;
+  color: var(--c-text-dim);
+  margin-top: 6px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.sidebar ul {
+  list-style: none;
+}
+
+.navItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 9px 18px;
+  font-size: 11.5px;
+  color: var(--c-text-dim);
+  border-left: 2px solid transparent;
+  text-align: left;
+  transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.navItem:hover {
+  color: var(--c-text);
+}
+
+.navItemActive {
+  color: var(--c-accent);
+  background: rgba(248, 203, 69, 0.08);
+  border-left-color: var(--c-accent);
+  font-weight: 600;
+}
+
+.navItemMuted {
+  opacity: 0.55;
+  cursor: default;
+}
+
+.main {
+  padding: 22px;
+  overflow: hidden;
+}
+
+.tabbar {
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  display: flex;
+  background: var(--c-surface-2);
+}
+
+.tabBtn {
+  flex: 1;
+  padding: 12px 0;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--c-text-dim);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border-top: 2px solid transparent;
+  transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.tabBtnActive {
+  color: var(--c-accent);
+  background: rgba(248, 203, 69, 0.08);
+  border-top-color: var(--c-accent);
+}
+
+@media (max-width: 640px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+  .sidebar {
+    display: none;
+  }
+}

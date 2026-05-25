@@ -1,0 +1,101 @@
+.section {
+  padding: var(--section-y) var(--gutter);
+  background: var(--c-bg);
+}
+
+.header {
+  margin-bottom: 60px;
+}
+
+.title {
+  font-size: clamp(32px, 4vw, 48px);
+}
+
+.accent {
+  color: var(--c-accent);
+}
+
+.body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 72px;
+}
+
+.pitch {
+  position: sticky;
+  top: 35%;
+  align-self: start;
+}
+
+.pitch p {
+  font-size: 15.5px;
+  color: var(--c-text-muted);
+  line-height: 1.8;
+  margin-bottom: 32px;
+}
+
+.steps {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.step {
+  position: relative;
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.line {
+  position: absolute;
+  left: 27px;
+  top: 56px;
+  width: 2px;
+  height: calc(100% - 24px);
+}
+
+.bullet {
+  width: 56px;
+  height: 56px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid;
+  position: relative;
+  z-index: 1;
+}
+
+.stepBody {
+  padding-top: 4px;
+}
+
+.stepNum {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.stepTitle {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 17px;
+  color: var(--c-text);
+  margin-bottom: 6px;
+}
+
+.stepDesc {
+  font-size: 13.5px;
+  color: var(--c-text-dim);
+  line-height: 1.65;
+}
+
+@media (max-width: 960px) {
+  .body { grid-template-columns: 1fr; gap: 40px; }
+  .pitch { position: static; }
+}

@@ -1,0 +1,145 @@
+.hero {
+  position: relative;
+  min-height: 100vh;
+  padding: 140px var(--gutter) 80px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background: var(--c-bg);
+}
+
+.grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(248, 203, 69, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(248, 203, 69, 0.045) 1px, transparent 1px);
+  background-size: 60px 60px;
+  animation: grid-drift 18s linear infinite;
+  pointer-events: none;
+}
+
+.glow {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  filter: blur(20px);
+}
+
+.glowA {
+  width: 720px;
+  height: 720px;
+  background: radial-gradient(circle, rgba(248, 203, 69, 0.08) 0%, transparent 70%);
+  top: -220px;
+  right: -120px;
+}
+
+.glowB {
+  width: 420px;
+  height: 420px;
+  background: radial-gradient(circle, rgba(248, 203, 69, 0.05) 0%, transparent 70%);
+  bottom: -100px;
+  left: 80px;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 1.05fr 1fr;
+  gap: 72px;
+  align-items: center;
+}
+
+.left {
+  animation: fade-up 0.8s ease both;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  animation: fade-up 0.8s 0.15s ease both;
+}
+
+.headline {
+  font-family: var(--font-display);
+  font-size: clamp(48px, 7vw, 96px);
+  font-weight: 700;
+  line-height: 0.96;
+  letter-spacing: -0.025em;
+  margin: 28px 0;
+  color: var(--c-text);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.accent {
+  color: var(--c-accent);
+}
+
+.lede {
+  font-size: 17px;
+  line-height: 1.7;
+  color: var(--c-text-muted);
+  max-width: 470px;
+  margin-bottom: 36px;
+  font-weight: 400;
+}
+
+.ctas {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  margin-bottom: 44px;
+  flex-wrap: wrap;
+}
+
+.trust {
+  display: flex;
+  gap: 24px;
+  list-style: none;
+  flex-wrap: wrap;
+}
+
+.trust li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12.5px;
+  color: var(--c-text-dim);
+}
+
+.trust svg {
+  color: var(--c-accent);
+}
+
+.card {
+  background: var(--c-surface);
+  border: 1px solid var(--c-accent-line);
+  padding: 22px 18px;
+}
+
+.cardHead {
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--c-accent);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+}
+
+@media (max-width: 960px) {
+  .hero {
+    padding-top: 120px;
+  }
+  .container {
+    grid-template-columns: 1fr;
+    gap: 56px;
+  }
+  .headline {
+    font-size: clamp(42px, 10vw, 72px);
+  }
+}

@@ -1,0 +1,19 @@
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 3px 9px;
+  border-radius: 2px;
+  letter-spacing: 0.02em;
+}
+
+.glyph {
+  font-size: 9px;
+}
+
+.safe     { color: var(--c-success);  background: rgba(29, 158, 117, 0.14); }
+.caution  { color: var(--c-warning);  background: rgba(248, 203, 69, 0.14); }
+.critical { color: var(--c-critical); background: rgba(216, 90, 48, 0.14); }
+.banned   { color: var(--c-danger);   background: rgba(192, 57, 43, 0.16); }

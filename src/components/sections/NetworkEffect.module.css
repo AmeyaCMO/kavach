@@ -1,0 +1,82 @@
+.section {
+  padding: var(--section-y) var(--gutter);
+  background: var(--c-surface);
+  text-align: center;
+}
+
+.title {
+  font-size: clamp(32px, 4vw, 52px);
+  margin-bottom: 48px;
+}
+
+.accent {
+  color: var(--c-accent);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+  background: var(--c-accent-line);
+  margin-bottom: 48px;
+}
+
+.card {
+  background: var(--c-surface-2);
+  padding: 52px 32px;
+  text-align: center;
+}
+
+.value {
+  font-family: var(--font-display);
+  font-size: 72px;
+  font-weight: 700;
+  color: var(--c-text-dim);
+  line-height: 1;
+  display: block;
+  margin-bottom: 14px;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.02em;
+}
+
+.valueAccent {
+  color: var(--c-accent);
+}
+
+.cardTitle {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 17px;
+  color: var(--c-text);
+  margin-bottom: 12px;
+}
+
+.cardDesc {
+  font-size: 13.5px;
+  color: var(--c-text-dim);
+  line-height: 1.65;
+}
+
+.quote {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 32px 40px;
+  border: 1px solid var(--c-accent-line);
+  background: rgba(248, 203, 69, 0.04);
+  font-size: 16px;
+  font-style: italic;
+  color: var(--c-text-muted);
+  line-height: 1.8;
+  text-align: left;
+}
+
+.quoteLabel,
+.quoteHighlight {
+  font-style: normal;
+  color: var(--c-accent);
+  font-weight: 600;
+}
+
+@media (max-width: 720px) {
+  .grid { grid-template-columns: 1fr; }
+}
