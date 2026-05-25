@@ -9,6 +9,33 @@ const iconFor = {
   pin: Pin,
 };
 
+function FooterColumn({ title, items }) {
+  return (
+    <div className={styles.col}>
+      <h4 className={styles.colHead}>{title}</h4>
+      <ul>
+        {items.map((l) => {
+          const href = l.href ?? '#';
+          const isExternal = l.external;
+          return (
+            <li key={l.label}>
+              <a
+                href={href}
+                className={isExternal ? styles.external : undefined}
+                {...(isExternal && !href.startsWith('mailto:')
+                  ? { target: '_blank', rel: 'noopener noreferrer' }
+                  : {})}
+              >
+                {l.label}
+              </a>
+            </li>
+          );
+        })}
+      </ul>
+    </div>
+  );
+}
+
 export function Footer() {
   return (
     <footer className={styles.footer}>
@@ -33,36 +60,8 @@ export function Footer() {
           </ul>
         </div>
 
-        <div className={styles.col}>
-          <h4 className={styles.colHead}>Product</h4>
-          <ul>
-            {footerLinks.product.map((l) => (
-              <li key={l}><a href="#">{l}</a></li>
-            ))}
-          </ul>
-        </div>
-
-        <div className={styles.col}>
-          <h4 className={styles.colHead}>Company</h4>
-          <ul>
-            {footerLinks.company.map((l) => (
-              <li key={l.label}>
-                {l.external ? (
-                  <a
-                    href={l.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={styles.external}
-                  >
-                    {l.label}
-                  </a>
-                ) : (
-                  <a href="#">{l.label}</a>
-                )}
-              </li>
-            ))}
-          </ul>
-        </div>
+        <FooterColumn title="Product" items={footerLinks.product} />
+        <FooterColumn title="Company" items={footerLinks.company} />
       </div>
 
       <div className={styles.bottom}>

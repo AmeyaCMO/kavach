@@ -10,13 +10,13 @@
   --c-text-muted: #CCCCCC;
   --c-text-dim: #888888;
 
-  --c-accent: #F8CB45;
-  --c-accent-dark: #E6B800;
+  --c-accent: #E8820C;
+  --c-accent-dark: #E8820C;
   --c-accent-soft: rgba(248, 203, 69, 0.08);
   --c-accent-line: rgba(248, 203, 69, 0.12);
 
   --c-success: #1D9E75;
-  --c-warning: #F8CB45;
+  --c-warning: #E8820C;
   --c-critical: #D85A30;
   --c-danger: #C0392B;
   --c-info: #185FA5;

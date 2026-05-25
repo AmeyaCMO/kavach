@@ -9,11 +9,17 @@ export const LOGIN_URL = 'https://blackboxkavach.com/login';
 export const CONTACT_EMAIL = 'info@blackboxadvisories.co.in';
 
 export const footerLinks = {
-  product: ['Features', 'How It Works', 'Industries', 'Pricing', 'Login'],
+  product: [
+    { label: 'Features',     href: '#features' },
+    { label: 'How It Works', href: '#how-it-works' },
+    { label: 'Industries',   href: '#industries' },
+    { label: 'Pricing',      href: '#' },
+    { label: 'Login',        href: LOGIN_URL, external: true },
+  ],
   company: [
     { label: 'BlackBox Advisories', href: 'https://www.blackboxadvisories.com', external: true },
     { label: 'About Us' },
-    { label: 'Contact' },
+    { label: 'Contact',      href: `mailto:${CONTACT_EMAIL}` },
     { label: 'Privacy Policy' },
     { label: 'Terms of Service' },
   ],
