@@ -12,7 +12,7 @@ const orbitDots = [
 export function ShieldBadge() {
   return (
     <div className={styles.float}>
-      <div className={styles.shield}>
+      {/* <div className={styles.shield}>
         <div className={styles.inner}>
           <span className={styles.deva}>क</span>
           <span className={styles.word}>VACH</span>
@@ -30,7 +30,8 @@ export function ShieldBadge() {
             boxShadow: `0 0 8px ${d.color}`,
           }}
         />
-      ))}
+      ))} */}
+      <img src="/kavach.png" alt="Shield badge" className={styles.shield} />
     </div>
   );
 }

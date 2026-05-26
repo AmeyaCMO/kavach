@@ -2,7 +2,6 @@ import { Button } from '../../ui/Button';
 import { EyebrowDot } from '../../ui/EyebrowDot';
 import { Lock, Globe, Bolt, ArrowRight, ArrowDown } from '../../../icons';
 import { LOGIN_URL } from '../../../data/nav';
-import { ShieldBadge } from './ShieldBadge';
 import { VerificationFlow } from './VerificationFlow';
 import { AlertCard } from './AlertCard';
 import styles from './Hero.module.css';
@@ -54,7 +53,18 @@ export function Hero() {
         </div>
 
         <div className={styles.right}>
-          <ShieldBadge />
+          <img
+            src="/Kavach.png"
+            alt="Kavach logo"
+            className={styles.logo}
+            style={{
+              width: '404px',
+              height: '220px',
+              objectFit: 'contain'
+            }}
+            // width="0"
+            // height="220"
+          />
 
           <div className={styles.card}>
             <div className={styles.cardHead}>Live verification pipeline</div>
